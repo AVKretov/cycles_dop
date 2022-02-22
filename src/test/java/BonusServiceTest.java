@@ -9,8 +9,7 @@ public class BonusServiceTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/data.csv")
-    @DisplayName("😱")
-    void testFromFile( long amount, boolean registred, long expected) {
+    void testFromFile(String test, long amount, boolean registred, long expected) {
         BonusService service = new BonusService();
 
         long actual = service.calculate(amount, registred);
